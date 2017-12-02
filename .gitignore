@@ -28,6 +28,11 @@ Build.zip
 /*.booproj
 /*.tmp
 /*.svd
+
+# ============= #
+# vim generated #
+# ============= #
+*~
  
 # ============ #
 # OS generated #
