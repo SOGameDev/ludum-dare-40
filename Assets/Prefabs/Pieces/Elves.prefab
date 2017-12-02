@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212129754837601696}
   - component: {fileID: 61806506907231734}
   - component: {fileID: 50926527494597224}
+  - component: {fileID: 114034868862702098}
   m_Layer: 0
   m_Name: Elves
   m_TagString: Untagged
@@ -87,6 +88,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
+--- !u!114 &114034868862702098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432759661340670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4afa65b7bc624a4eae46a1f3f3e8ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_prefab: {fileID: 4540272926932618, guid: 117bea71b08df17438f1813b839017aa,
+    type: 2}
 --- !u!212 &212129754837601696
 SpriteRenderer:
   m_ObjectHideFlags: 1
