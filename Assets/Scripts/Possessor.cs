@@ -69,6 +69,26 @@ public class Possessor : MonoBehaviour {
     }
   }
 
+  void OnTriggerStay2D ( Collider2D other ) {
+    if ( !rend.enabled )
+    {
+      return;
+    }
+    if ( possession_target == null )
+    {
+      possession_target = other;
+
+      if ( highlight != null )
+      {
+        highlight.position = other.gameObject.transform.position;
+      }
+      else
+      {
+        highlight = Instantiate(highlight_prefab, other.gameObject.transform.position, Quaternion.identity);
+      }
+    }
+  }
+
   void OnTriggerExit2D ( Collider2D other ) {
     if ( !rend.enabled )
     {
