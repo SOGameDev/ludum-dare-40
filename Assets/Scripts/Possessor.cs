@@ -7,19 +7,41 @@ public class Possessor : MonoBehaviour {
   public  Transform  highlight_prefab;
   private Transform  highlight = null;
 
-  private Collider2D possession_target;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+  private Collider2D     possession_target = null;
+  private movement       movement_controller = null;
+  private SpriteRenderer rend;
+  
+  void Start () {
+    movement_controller = GameObject.Find( "Movement Controller" ).GetComponent<movement>();
+    rend = gameObject.GetComponent<SpriteRenderer>();
+  }
+    
 	void Update () {
-		
+    // we want to possess something
+    if ( Input.GetButtonDown("Possess") && movement_controller.possessed_object.gameObject == gameObject && possession_target != null ) {
+      movement_controller.possessed_object = possession_target.gameObject.GetComponent<Rigidbody2D>();
+      rend.enabled = false;
+    }
+
+    // we want to stop possessing something
+    else if ( Input.GetButtonDown("Possess") && movement_controller.possessed_object.gameObject != gameObject ) {
+      transform.position = movement_controller.possessed_object.position;
+      movement_controller.possessed_object = gameObject.GetComponent<Rigidbody2D>();
+      rend.enabled = true;
+    }
+
+    // if we've possessed something, move the highlight with it
+    if ( !rend.enabled && highlight != null )
+    {
+      highlight.position = movement_controller.possessed_object.position;
+    }
 	}
 
   void OnTriggerEnter2D ( Collider2D other ) {
+    if ( !rend.enabled )
+    {
+      return;
+    }
     possession_target = other;
 
     if ( highlight != null )
@@ -33,10 +55,15 @@ public class Possessor : MonoBehaviour {
   }
 
   void OnTriggerExit2D ( Collider2D other ) {
+    if ( !rend.enabled )
+    {
+      return;
+    }
     if ( highlight != null && other == possession_target )
     {
       Destroy( highlight.gameObject );
       highlight = null;
+      possession_target = null;
     }
   }
 }
