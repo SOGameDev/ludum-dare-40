@@ -49,3 +49,6 @@ results.xml
 /Assets/InitTestScene*.unity
 /Assets/InitTestScene*.unity.meta
 editor.log
+Assets/Tiled2Unity/Materials/Resources*
+Assets/Tiled2Unity/Prefabs/Resources*
+Assets/Tiled2Unity/Meshes
