@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour {
     {
       seconds_remaining = 0;
       started = false;
-      if ( timerEnd )
+      if ( timerEnd != null )
       {
         timerEnd(this, EventArgs.Empty);
       }
