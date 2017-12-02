@@ -5,13 +5,9 @@ using UnityEngine;
 public class movement : MonoBehaviour {
 
   public  Rigidbody2D  possessed_object;
-
-  private Vector2      last_position;
-  private Vector2      target;
   private float        speed = 250.0f;
 
   void Start () {
-    target = possessed_object.position;
   }
 
   void FixedUpdate () {
