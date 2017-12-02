@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Elf_BoxTrigger
+  - Elf_WallCollider
+  - Wall
+  - Present
   - 
   - 
   - 
