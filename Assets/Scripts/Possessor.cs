@@ -30,10 +30,11 @@ public class Possessor : MonoBehaviour {
       rend.enabled = true;
     }
 
-    // if we've possessed something, move the highlight with it
+    // if we've possessed something, move with it
     if ( !rend.enabled && highlight != null )
     {
       highlight.position = movement_controller.possessed_object.position;
+      gameObject.transform.position = movement_controller.possessed_object.position;
     }
 	}
 
