@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4583927383205198}
   - component: {fileID: 212111184000700664}
-  - component: {fileID: 61495824841233100}
   - component: {fileID: 50944895984414578}
+  - component: {fileID: 60675387346695272}
   m_Layer: 11
-  m_Name: O
+  m_Name: J
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 6
+  m_Mass: 4
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -62,8 +62,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61495824841233100
-BoxCollider2D:
+--- !u!60 &60675387346695272
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -78,15 +78,20 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 2, y: 3}
     newSize: {x: 2, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.98, y: 1.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.02, y: 1.48}
+      - {x: 0.98, y: 1.48}
+      - {x: 0.98, y: -1.48}
+      - {x: -0.98, y: -1.48}
+      - {x: -0.98, y: -0.52}
+      - {x: 0.02, y: -0.52}
 --- !u!212 &212111184000700664
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -121,7 +126,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ccf6873d3c1184010aa46a493d7bf900, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ae4a157b710c45848c85e8ffa7597ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
