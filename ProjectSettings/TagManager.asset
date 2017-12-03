@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Present
+  - Scoring Deadzone
   - Conveyor Belt
   layers:
   - Default
@@ -19,7 +21,7 @@ TagManager:
   - Wall
   - Present
   - Conveyor Belt
-  - 
+  - Scoring Deadzone
   - 
   - 
   - 

@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 212111184000700664}
   - component: {fileID: 50944895984414578}
   - component: {fileID: 60675387346695272}
-  - component: {fileID: 114523846976729328}
+  - component: {fileID: 114921507244381184}
   m_Layer: 11
-  m_Name: L
-  m_TagString: Untagged
+  m_Name: S
+  m_TagString: Present
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,13 +87,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.98, y: 1.48}
+    - - {x: -0.98, y: -0.48}
+      - {x: -0.98, y: 1.48}
       - {x: -0.02, y: 1.48}
-      - {x: -0.02, y: -0.52}
+      - {x: -0.02, y: 0.48}
+      - {x: 0.98, y: 0.48}
       - {x: 0.98, y: -0.52}
       - {x: 0.98, y: -1.48}
-      - {x: -0.98, y: -1.48}
---- !u!114 &114523846976729328
+      - {x: 0.02, y: -1.48}
+      - {x: 0.02, y: -0.48}
+--- !u!114 &114921507244381184
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -138,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8463dba6f926d423191733d3deb612c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25fdeff3976414d15b982d5828d4d9df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
@@ -29,5 +30,17 @@ public class GameOver : MonoBehaviour {
   void TimerEndHandler ( object _, EventArgs __ ) {
     game_over_ui.SetActive(true);
     time_up = true;
+
+    float score = 0;
+    foreach ( GameObject present in GameObject.FindGameObjectsWithTag("Present") )
+    {
+      //if ( present.GetComponent<Present>().scorable )
+      {
+        score += present.GetComponent<Rigidbody2D>().mass * 25;
+      }
+    }
+
+    Text score_text = GameObject.Find("Score").GetComponent<Text>();
+    score_text.text = score.ToString();
   }
 }
