@@ -77,15 +77,15 @@ public class Possessor : MonoBehaviour {
     if ( possession_target == null )
     {
       possession_target = other;
+    }
 
-      if ( highlight != null )
-      {
-        highlight.position = other.gameObject.transform.position;
-      }
-      else
-      {
-        highlight = Instantiate(highlight_prefab, other.gameObject.transform.position, Quaternion.identity);
-      }
+    if ( highlight != null )
+    {
+      highlight.position = other.gameObject.transform.position;
+    }
+    else
+    {
+      highlight = Instantiate(highlight_prefab, other.gameObject.transform.position, Quaternion.identity);
     }
   }
 
