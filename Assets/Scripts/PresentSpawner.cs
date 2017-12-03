@@ -21,6 +21,8 @@
 
         float spawnTime;
 
+        public bool started = false;
+
         void Start()
         {
             lastSpawnTime = Time.time;
@@ -29,9 +31,15 @@
 
         void Update()
         {
+            Vector2 input = new Vector2( Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical") );
+            if ( input.magnitude > 0.3 )
+            {
+              started = true;
+            }
+
             if (presentPrefabs.Count <= 0) return;
 
-            if (Time.time >= lastSpawnTime + spawnTime)
+            if ( started && Time.time >= lastSpawnTime + spawnTime )
             {
                 int presentIndex = Random.Range(0, presentPrefabs.Count - 1);
                 Instantiate(presentPrefabs[presentIndex], transform.position, Quaternion.Euler(0, 0, Random.Range(0.0f, 360.0f)));

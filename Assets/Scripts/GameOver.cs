@@ -23,7 +23,7 @@ public class GameOver : MonoBehaviour {
     {
       if ( Input.GetButtonDown("Start") )
       {
-        SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+        SceneManager.LoadScene( "LevelSelect" );
       }
     }
 	}
