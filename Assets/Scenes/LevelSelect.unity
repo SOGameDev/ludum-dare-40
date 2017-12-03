@@ -792,7 +792,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471671359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -793.99207, y: -292, z: 0}
+  m_LocalPosition: {x: -443.02505, y: -292, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 93769701}
@@ -1453,8 +1453,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1074552140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 335.5, y: 125.5, z: 0}
-  m_LocalScale: {x: 0.41833332, y: 0.41833332, z: 0.41833332}
+  m_LocalPosition: {x: 330, y: 219.5, z: 0}
+  m_LocalScale: {x: 0.7316667, y: 0.7316667, z: 0.7316667}
   m_Children:
   - {fileID: 93769701}
   - {fileID: 1748627406}
@@ -2721,7 +2721,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2006291132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 793.99207, y: -292, z: 0}
+  m_LocalPosition: {x: 443.02505, y: -292, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 93769701}
@@ -2768,9 +2768,9 @@ MonoBehaviour:
 
     tiled & tiled2unity
 
-    kenney
+    kenney & their assets
 
-    santa claus'
+    terry cavanagh & bosca ceoil'
 --- !u!222 &2006291135
 CanvasRenderer:
   m_ObjectHideFlags: 0
