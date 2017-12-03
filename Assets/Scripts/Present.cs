@@ -8,7 +8,10 @@
     [RequireComponent(typeof(Rigidbody2D))]
     public class Present : MonoBehaviour
     {
-        const string conveyorBeltTag = "Conveyor Belt";
+        const string conveyorBeltTag    = "Conveyor Belt";
+        const string scoringDeadzoneTag = "Scoring Deadzone";
+
+        public int deadzone_count = 0;
 
         bool onConveyorBelt;
 
@@ -31,6 +34,10 @@
                 conveyorBeltDirection = collision.transform.right;
                 conveyorBeltSpeed = collision.GetComponent<ConveyorBelt>().Speed;
             }
+            else if ( collision.CompareTag( scoringDeadzoneTag ) )
+            {
+                deadzone_count ++;
+            }
         }
 
         void OnTriggerExit2D(Collider2D collision)
@@ -38,6 +45,10 @@
             if (collision.CompareTag(conveyorBeltTag))
             {
                 onConveyorBelt = false;
+            }
+            else if ( collision.CompareTag( scoringDeadzoneTag ) )
+            {
+                deadzone_count --;
             }
         }
 

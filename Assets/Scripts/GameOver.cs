@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Assets.Scripts;
 
 public class GameOver : MonoBehaviour {
   public GameObject game_over_ui;
@@ -34,7 +35,7 @@ public class GameOver : MonoBehaviour {
     float score = 0;
     foreach ( GameObject present in GameObject.FindGameObjectsWithTag("Present") )
     {
-      //if ( present.GetComponent<Present>().scorable )
+      if ( present.GetComponent<Present>().deadzone_count == 0 )
       {
         score += present.GetComponent<Rigidbody2D>().mass * 25;
       }
