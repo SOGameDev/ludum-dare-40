@@ -9,7 +9,10 @@
     [RequireComponent(typeof(Rigidbody2D))]
     public class Present : MonoBehaviour
     {
-        const string conveyorBeltTag = "Conveyor Belt";
+        const string conveyorBeltTag    = "Conveyor Belt";
+        const string scoringDeadzoneTag = "Scoring Deadzone";
+
+        public int deadzone_count = 0;
 
         new Rigidbody2D rigidbody;
 
@@ -30,6 +33,10 @@
             {
                 conveyorBelts.Add(collision.GetComponent<ConveyorBelt>());
                 ConveyorBeltChanged();
+            }
+            else if ( collision.CompareTag( scoringDeadzoneTag ) )
+            {
+                deadzone_count ++;
             }
         }
 
@@ -52,6 +59,10 @@
                     conveyorBeltDirection = conveyorBelt.transform.right;
                     conveyorBeltSpeed = conveyorBelt.Speed;
                 }
+            }
+            else if ( collision.CompareTag( scoringDeadzoneTag ) )
+            {
+                deadzone_count --;
             }
         }
 
