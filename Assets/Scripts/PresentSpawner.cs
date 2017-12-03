@@ -44,6 +44,7 @@
                 int presentIndex = Random.Range(0, presentPrefabs.Count - 1);
                 Instantiate(presentPrefabs[presentIndex], transform.position, Quaternion.Euler(0, 0, Random.Range(0.0f, 360.0f)));
                 lastSpawnTime = Time.time;
+                spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             }
         }
     }
