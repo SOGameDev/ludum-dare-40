@@ -47,6 +47,10 @@
                 conveyorBelts.Remove(collision.GetComponent<ConveyorBelt>());
                 ConveyorBeltChanged();
             }
+            else if (collision.CompareTag(scoringDeadzoneTag))
+            {
+                deadzone_count--;
+            }
         }
 
         void ConveyorBeltChanged()
@@ -59,10 +63,6 @@
                     conveyorBeltDirection = conveyorBelt.transform.right;
                     conveyorBeltSpeed = conveyorBelt.Speed;
                 }
-            }
-            else if ( collision.CompareTag( scoringDeadzoneTag ) )
-            {
-                deadzone_count --;
             }
         }
 
