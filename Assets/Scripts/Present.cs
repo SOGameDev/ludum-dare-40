@@ -1,5 +1,6 @@
 ﻿namespace Assets.Scripts
 {
+    using System.Collections.Generic;
     using UnityEngine;
 
     /// <summary>
@@ -10,13 +11,13 @@
     {
         const string conveyorBeltTag = "Conveyor Belt";
 
-        bool onConveyorBelt;
-
         new Rigidbody2D rigidbody;
 
         Vector2 conveyorBeltDirection;
 
         float conveyorBeltSpeed;
+
+        List<ConveyorBelt> conveyorBelts = new List<ConveyorBelt>();
 
         void Start()
         {
@@ -27,9 +28,8 @@
         {
             if (collision.CompareTag(conveyorBeltTag))
             {
-                onConveyorBelt = true;
-                conveyorBeltDirection = collision.transform.right;
-                conveyorBeltSpeed = collision.GetComponent<ConveyorBelt>().Speed;
+                conveyorBelts.Add(collision.GetComponent<ConveyorBelt>());
+                ConveyorBeltChanged();
             }
         }
 
@@ -37,13 +37,27 @@
         {
             if (collision.CompareTag(conveyorBeltTag))
             {
-                onConveyorBelt = false;
+                conveyorBelts.Remove(collision.GetComponent<ConveyorBelt>());
+                ConveyorBeltChanged();
+            }
+        }
+
+        void ConveyorBeltChanged()
+        {
+            conveyorBeltSpeed = 0;
+            foreach (ConveyorBelt conveyorBelt in conveyorBelts)
+            {
+                if (conveyorBelt.Speed > conveyorBeltSpeed)
+                {
+                    conveyorBeltDirection = conveyorBelt.transform.right;
+                    conveyorBeltSpeed = conveyorBelt.Speed;
+                }
             }
         }
 
         void FixedUpdate()
         {
-            if (onConveyorBelt)
+            if (conveyorBelts.Count > 0)
             {
                 rigidbody.AddForce(conveyorBeltSpeed*conveyorBeltDirection*rigidbody.mass);
             }
