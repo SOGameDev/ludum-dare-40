@@ -51,5 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54b0c6affe93491f9180611459d0e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowflakePrefab: {fileID: 224248247810056810, guid: 0f4a36f68dc6f488dac8bc894d6fdd8c,
+  snowflakePrefab: {fileID: 114559796319534052, guid: 0f4a36f68dc6f488dac8bc894d6fdd8c,
     type: 2}
+  minDelay: 0.05
+  maxDelay: 0.2
+  minScale: 0.01
+  maxScale: 0.25
+  angleRange: 20
+  minSpeed: 50
+  maxSpeed: 300

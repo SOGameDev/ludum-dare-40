@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 224248247810056810}
   - component: {fileID: 222699553393892558}
   - component: {fileID: 114978974220081458}
+  - component: {fileID: 114559796319534052}
+  - component: {fileID: 114907899910848472}
   m_Layer: 5
   m_Name: Snowflake
   m_TagString: Untagged
@@ -28,6 +30,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114559796319534052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844190646024102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be98a90881f89c544a4277266bed237b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+--- !u!114 &114907899910848472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844190646024102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be98a90881f89c544a4277266bed237b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!114 &114978974220081458
 MonoBehaviour:
   m_ObjectHideFlags: 1

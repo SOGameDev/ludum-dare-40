@@ -8,6 +8,7 @@ TagManager:
   - Scoring Deadzone
   - Conveyor Belt
   - GUI
+  - Snow Canvas
   layers:
   - Default
   - TransparentFX
