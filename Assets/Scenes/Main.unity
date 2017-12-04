@@ -704,6 +704,48 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 50926527494597224, guid: 1d7c236819269604db6b428c8952f8ac,
     type: 2}
   m_PrefabInternal: {fileID: 425040400}
+--- !u!1001 &1312271232
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 307.91614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 160.0977
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780642031599000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e2be707ecea1f4d838574f3cb7728a50, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1323888074 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4397710876321390, guid: 1d7c236819269604db6b428c8952f8ac,
